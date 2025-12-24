@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Manager Approval</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="dashboard">
+  <h2>Manager Approval Panel</h2>
+
+  <table border="1" width="100%" cellpadding="10">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>User ID</th>
+        <th>Amount</th>
+        <th>Category</th>
+        <th>Description</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="expenseTable"></tbody>
+  </table>
+
+  <br>
+  <button onclick="window.location.href='/dashboard-page'">Back</button>
+</div>
+
+<script src="{{ url_for('static', filename='js/manager.js') }}"></script>
+</body>
+</html>

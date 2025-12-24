@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="dashboard">
+
+  <!-- Logout -->
+  <button class="logout-btn" onclick="logout()">Logout</button>
+
+  <h2>Dashboard</h2>
+
+  <!-- TOTAL EXPENSE CARD -->
+  <div class="card">
+    <h3>Total Approved Expense</h3>
+    <h1 class="amount">₹ <span id="total">0</span></h1>
+  </div>
+
+  <!-- ROLE BASED ACTION BUTTONS -->
+  <div class="card">
+
+    <!-- Employee -->
+    <button id="addExpenseBtn"
+            onclick="window.location.href='/add-expense-page'">
+      Add New Expense
+    </button>
+
+    <!-- Manager -->
+    <button id="managerBtn"
+            onclick="window.location.href='/manager-page'">
+      Manager Approval
+    </button>
+
+    <!-- Admin -->
+    <button id="adminBtn"
+            onclick="window.location.href='/admin-page'">
+      Admin Panel
+    </button>
+
+  </div>
+
+  <!-- ANALYTICS CHART -->
+  <div class="card chart-card">
+    <h3>Category-wise Expense</h3>
+    <canvas id="chart"></canvas>
+  </div>
+
+</div>
+
+<!-- Dashboard JS -->
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+
+</body>
+</html>

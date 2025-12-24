@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="dashboard">
+  <h2>Admin Panel</h2>
+
+  <div class="card">
+    <h3>Users</h3>
+    <ul id="users"></ul>
+  </div>
+
+  <div class="card">
+    <h3>All Expenses</h3>
+    <ul id="expenses"></ul>
+  </div>
+
+  <button onclick="window.location.href='/dashboard-page'">Back</button>
+</div>
+
+<script src="{{ url_for('static', filename='js/admin.js') }}"></script>
+</body>
+</html>

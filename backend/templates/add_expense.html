@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Expense</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<div class="card">
+  <h2>Add Expense</h2>
+
+  <form id="addExpenseForm" enctype="multipart/form-data">
+
+    <input
+      id="amount"
+      type="number"
+      placeholder="Amount"
+      required
+    >
+
+    <input
+      id="receipt"
+      type="file"
+    >
+
+    <select id="category" required>
+      <option value="">Select Category</option>
+      <option value="1">Food</option>
+      <option value="2">Travel</option>
+    </select>
+
+    <textarea
+      id="description"
+      placeholder="Description"
+      required
+    ></textarea>
+
+    <!-- 🔥 MUST BE type="submit" -->
+    <button type="submit">Submit Expense</button>
+
+  </form>
+</div>
+
+<!-- 🔥 JS FILE MUST LOAD -->
+<script src="/static/js/add_expense.js"></script>
+
+</body>
+</html>
